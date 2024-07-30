@@ -15,50 +15,36 @@ export default function Navbar() {
     <>
       <section
         className={`  ${
-          darkMode
-            ? "text-white  "
-            : "bg-Very-Dark-Blue-bg "
+          darkMode ? "  bg-Very-Dark-Blue-bg" : " bg-white"
         }`}>
-        <nav className="flex justify-between items-center py-6 px-4">
+        <nav className="max-w-7xl flex justify-between items-center py-6 px-4 xl:mx-auto xl:px-0 xl:py-8">
           <div>
             <h3
-              className={` font-bold text-sm ${
+              className={` font-bold text-sm sm:text-base md:text-2xl ${
                 darkMode
-                  ? " text-Very-Dark-Blue-text"
-                  : " text-white  "
+                  ? "text-white"
+                  : "  text-Very-Dark-Blue-text  "
               }`}>
               Where in the world?
             </h3>
           </div>
           <button
-            className="flex gap-2 "
+            className="flex gap-2 items-center"
             onClick={toggleDarkMode}>
-            {darkMode ? (
-              <>
-                <Image
-                  src={iconLunaDark}
-                  alt="Icono"
-                  width={16}
-                  height={16}
-                />
-
-                <span className="text-sm text-Very-Dark-Blue-text">
-                  Dard Mode
-                </span>
-              </>
-            ) : (
-              <>
-                <Image
-                  src={iconLuna}
-                  alt="Icono"
-                  width={16}
-                  height={16}
-                />
-                <span className="text-sm text-white">
-                  Light Mode
-                </span>
-              </>
-            )}
+            <Image
+              src={darkMode ? iconLuna : iconLunaDark}
+              alt="Icono"
+              width={16}
+              height={16}
+            />
+            <span
+              className={` text-sm text-white md:text-base ${
+                darkMode
+                  ? "text-white"
+                  : "  text-Very-Dark-Blue-text  "
+              }`}>
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </span>
           </button>
         </nav>
       </section>
