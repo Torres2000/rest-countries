@@ -8,34 +8,22 @@ import React, {
 } from "react";
 
 const DataContext = createContext();
-
+import datos from "@/components/datos/data.json";
 const DataProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+  const datosJson = datos;
+  const [data, setData] = useState(datosJson);
   const [buscar, setBuscar] = useState("all");
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "https://restcountries.com/v3.1/" + buscar
-      );
-      if (!response.ok) {
-        throw new Error("Pais No Encontrado"); // Lanza un error si la respuesta no es exitosa
-      }
-      const jsonData = await response.json();
-      setData(jsonData);
-    } catch (error) {
-      alert(error.message); // Muestra una alerta con el mensaje de error
-    }
-  };
-
-  useEffect(() => {
-    fetchData();
-  }, []);
-  ////console.log("Use state Buscar: " + buscar);
-
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <DataContext.Provider
-      value={{ data, setData, buscar, setBuscar }}>
+      value={{
+        data,
+        setData,
+        buscar,
+        setBuscar,
+        darkMode,
+        setDarkMode,
+      }}>
       {children}
     </DataContext.Provider>
   );

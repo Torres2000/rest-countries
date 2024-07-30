@@ -5,13 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --Dark-Blue: hsl(209, 23%, 22%); /*(Dark Mode Elements)*/
-  --Very-Dark-Blue: hsl(
+  --Dark-Blue: hsl(208, 23%, 22%); /*(Dark Mode Elements)*/
+  --Very-Dark-Blue-bg: hsl(
     207,
     26%,
     17%
   ); /* (Dark Mode Background) */
-  --Very-Dark-Blue: hsl(
+  --Very-Dark-Blue-text: hsl(
     200,
     15%,
     8%
