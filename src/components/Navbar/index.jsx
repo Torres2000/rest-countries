@@ -9,12 +9,12 @@ export default function Navbar() {
   const { darkMode, setDarkMode } = useContext(DataContext);
   console.log(darkMode);
   function toggleDarkMode(params) {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
+    setDarkMode(() => !darkMode);
   }
   return (
     <>
       <section
-        className={`  ${
+        className={`${
           darkMode ? "  bg-Very-Dark-Blue-bg" : " bg-white"
         }`}>
         <nav className="max-w-7xl flex justify-between items-center py-6 px-4 xl:mx-auto xl:px-0 xl:py-8">
@@ -23,7 +23,7 @@ export default function Navbar() {
               className={` font-bold text-sm sm:text-base md:text-2xl ${
                 darkMode
                   ? "text-white"
-                  : "  text-Very-Dark-Blue-text  "
+                  : "text-Very-Dark-Blue-text"
               }`}>
               Where in the world?
             </h3>
@@ -38,10 +38,10 @@ export default function Navbar() {
               height={16}
             />
             <span
-              className={` text-sm text-white md:text-base ${
+              className={` text-sm  md:text-base ${
                 darkMode
                   ? "text-white"
-                  : "  text-Very-Dark-Blue-text  "
+                  : "text-Very-Dark-Blue-text"
               }`}>
               {darkMode ? "Light Mode" : "Dark Mode"}
             </span>
