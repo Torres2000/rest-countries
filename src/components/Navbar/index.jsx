@@ -7,7 +7,6 @@ import { DataContext } from "@/context";
 import { useContext } from "react";
 export default function Navbar() {
   const { darkMode, setDarkMode } = useContext(DataContext);
-  console.log(darkMode);
   function toggleDarkMode(params) {
     setDarkMode(() => !darkMode);
   }
