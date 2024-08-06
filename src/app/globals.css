@@ -16,7 +16,7 @@
     15%,
     8%
   ); /* (Light Mode Text) */
-  --Dark-Gray: hsl(0, 0%, 52%); /*  (Light Mode Input) */
+  --Dark-Gray: #858585; /*  (Light Mode Input) */
   --Very-Light-Gray: hsl(
     0,
     0%,
