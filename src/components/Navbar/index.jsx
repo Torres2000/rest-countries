@@ -15,7 +15,7 @@ export default function Navbar() {
     <>
       <section
         className={`${
-          darkMode ? "  bg-Very-Dark-Blue-bg" : " bg-white"
+          darkMode ? "  bg-Dark-Blue" : " bg-white"
         }`}>
         <nav className="max-w-7xl w-[90%] flex justify-between items-center mx-auto py-6  xl:mx-auto 2xl:px-0 xl:py-8">
           <div>
