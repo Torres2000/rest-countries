@@ -50,7 +50,7 @@ export default function Desplegable() {
   return (
     <Menu
       as="div"
-      className="relative inline-block text-left mt-8">
+      className="relative inline-block text-left mt-8 md:m-0">
       <div>
         <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-4 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           Filter by Region

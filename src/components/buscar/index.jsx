@@ -6,8 +6,8 @@ export default function Buscar() {
   return (
     <>
       <section className="mt-6">
-        <div className="w-[90%] mx-auto ">
-          <div className="flex bg-white py-3 rounded-lg">
+        <div className=" max-w-7xl w-[90%] mx-auto md:flex justify-between">
+          <div className="flex bg-white py-3 rounded-lg md:w-2/4 md:p-0">
             <Image
               src={iconLupa}
               alt="Icon Lupa"
