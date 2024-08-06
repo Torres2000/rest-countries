@@ -12,7 +12,7 @@ export default function Buscar() {
       <section className="mt-6">
         <div className="max-w-7xl w-[90%] mx-auto md:flex justify-between">
           <div
-            className={`flex bg-white py-3 rounded-lg md:w-2/4 md:p-1 ${
+            className={`flex py-3 rounded-lg md:w-2/4 md:p-1 ${
               darkMode ? "bg-Dark-Blue" : "bg-white"
             }`}>
             <Image
