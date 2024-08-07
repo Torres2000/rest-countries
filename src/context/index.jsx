@@ -14,6 +14,8 @@ const DataProvider = ({ children }) => {
   const [data, setData] = useState(datosJson);
   const [buscar, setBuscar] = useState("all");
   const [darkMode, setDarkMode] = useState(false);
+  const [datosFiltrados, setDatosFiltrados] =
+    useState(data);
   return (
     <DataContext.Provider
       value={{
@@ -23,6 +25,8 @@ const DataProvider = ({ children }) => {
         setBuscar,
         darkMode,
         setDarkMode,
+        datosFiltrados,
+        setDatosFiltrados,
       }}>
       {children}
     </DataContext.Provider>

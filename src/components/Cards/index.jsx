@@ -5,13 +5,13 @@ import { useContext } from "react";
 import { DataContext } from "@/context";
 import Image from "next/image";
 export default function Cards() {
-  const { data, darkMode } = useContext(DataContext);
-  console.log(data);
+  const { datosFiltrados, darkMode } =
+    useContext(DataContext);
   return (
     <>
       <section className="mt-12 ">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-5 px-5 xl:w-[90%] xl:p-0 ">
-          {data.map((datos, index) => (
+          {datosFiltrados.map((datos, index) => (
             <div
               key={index}
               className={`max-w-[250px] w-2/3 xl:w-full mx-auto rounded-lg overflow-hidden xl:m-0 ${
