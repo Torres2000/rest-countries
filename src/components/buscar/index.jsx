@@ -4,9 +4,27 @@ import { DataContext } from "@/context";
 import Desplegable from "./desplegable";
 import iconLupa from "@/img/iconLupa.svg";
 import Image from "next/image";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 export default function Buscar() {
-  const { darkMode } = useContext(DataContext);
+  const { data, setDatosFiltrados, darkMode } =
+    useContext(DataContext);
+
+  const [buscar, setBuscar] = useState("");
+
+  const handleSearchChange = (event) => {
+    setBuscar(event.target.value);
+  };
+
+  useEffect(() => {
+    setDatosFiltrados(
+      data.filter((country) =>
+        country.name
+          .toLowerCase()
+          .includes(buscar.toLowerCase())
+      )
+    );
+  }, [buscar]);
+
   return (
     <>
       <section className="mt-6">
@@ -23,6 +41,8 @@ export default function Buscar() {
               className="mx-6 cursor-pointer "
             />
             <input
+              value={buscar}
+              onChange={handleSearchChange}
               type="text"
               placeholder="Search for a country..."
               className={` w-full focus-visible:outline-none ${

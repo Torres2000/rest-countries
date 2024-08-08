@@ -18,11 +18,9 @@ export default function Desplegable() {
   const regions = [
     ...new Set(data.map((country) => country.region)),
   ];
-  console.log(regions);
 
   const handleRegionChange = (event) => {
     const region = event;
-    console.log(region);
     setDatosFiltrados(
       data.filter((country) => country.region === region)
     );
@@ -59,6 +57,7 @@ export default function Desplegable() {
       region: "region/oceania",
     },
   ];
+
   return (
     <>
       <Menu
@@ -80,20 +79,19 @@ export default function Desplegable() {
 
         <MenuItems
           transition
-          className={`absolute  z-10 mt-2 w-full origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in ${
+          className={`absolute  z-10 mt-2 py-3 w-full origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in ${
             darkMode
               ? "bg-Dark-Blue text-white"
               : "bg-white"
           }`}>
           {regions.map((dato, index) => (
-            <div className="py-1" key={index}>
+            <div className="px-1" key={index}>
               <MenuItem>
-                <a
+                <span
                   onClick={() => handleRegionChange(dato)}
-                  href="#"
-                  className="block px-4 text-sm  data-[focus]:bg-gray-100 data-[focus]:text-gray-900">
+                  className="block px-2 py-2 text-sm  data-[focus]:bg-gray-100 data-[focus]:text-gray-900 hover:bg-Dark-Gray cursor-pointer rounded-md">
                   {dato}
-                </a>
+                </span>
               </MenuItem>
             </div>
           ))}
