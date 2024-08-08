@@ -1,10 +1,10 @@
 /** @format */
 "use client";
-import { DataContext } from "@/context";
+import { DataContext } from "@/app/context";
 import { useContext } from "react";
-import Navbar from "@/components/Navbar";
-import Buscar from "@/components/Buscar";
-import Cards from "@/components/Cards";
+import Navbar from "@/app/components/Navbar";
+import Buscar from "@/app/components/Buscar";
+import Cards from "@/app/components/Cards";
 
 export default function Home() {
   const { darkMode } = useContext(DataContext);

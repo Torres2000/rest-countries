@@ -1,7 +1,7 @@
 /** @format */
 
-import { DataProvider } from "@/context";
-import Principal from "@/components/home";
+import { DataProvider } from "@/app/context";
+import Principal from "@/app/components/home";
 export default function Home() {
   return (
     <>

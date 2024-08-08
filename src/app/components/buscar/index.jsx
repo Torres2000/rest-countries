@@ -1,8 +1,8 @@
 /** @format */
 "use client";
-import { DataContext } from "@/context";
+import { DataContext } from "@/app/context";
 import Desplegable from "./desplegable";
-import iconLupa from "@/img/iconLupa.svg";
+import iconLupa from "@/app/img/iconLupa.svg";
 import Image from "next/image";
 import { useContext, useEffect, useState } from "react";
 export default function Buscar() {

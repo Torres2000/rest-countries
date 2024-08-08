@@ -1,9 +1,9 @@
 /** @format */
 "use client";
-import iconLuna from "@/img/iconLuna.svg";
-import iconLunaDark from "@/img/iconLunaDark.svg";
+import iconLuna from "@/app/img/iconLuna.svg";
+import iconLunaDark from "@/app/img/iconLunaDark.svg";
 import Image from "next/image";
-import { DataContext } from "@/context";
+import { DataContext } from "@/app/context";
 import { useContext } from "react";
 export default function Navbar() {
   const { darkMode, setDarkMode } = useContext(DataContext);

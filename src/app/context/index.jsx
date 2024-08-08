@@ -8,7 +8,7 @@ import React, {
 } from "react";
 
 const DataContext = createContext();
-import datos from "@/components/datos/data.json";
+import datos from "@/app/components/datos/data.json";
 const DataProvider = ({ children }) => {
   const datosJson = datos;
   const [data, setData] = useState(datosJson);

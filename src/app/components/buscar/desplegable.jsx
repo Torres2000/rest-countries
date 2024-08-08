@@ -9,7 +9,7 @@ import {
 } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useContext, useState } from "react";
-import { DataContext } from "@/context";
+import { DataContext } from "@/app/context";
 
 export default function Desplegable() {
   const { data, setDatosFiltrados, darkMode } =

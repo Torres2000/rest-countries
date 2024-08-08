@@ -2,7 +2,7 @@
 
 "use client";
 import { useContext } from "react";
-import { DataContext } from "@/context";
+import { DataContext } from "@/app/context";
 import Image from "next/image";
 export default function Cards() {
   const { datosFiltrados, darkMode } =
