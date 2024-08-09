@@ -13,9 +13,21 @@ const DataProvider = ({ children }) => {
   const datosJson = datos;
   const [data, setData] = useState(datosJson);
   const [buscar, setBuscar] = useState("all");
-  const [darkMode, setDarkMode] = useState(false);
   const [datosFiltrados, setDatosFiltrados] =
     useState(data);
+
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme");
+    if (storedTheme) {
+      setDarkMode(storedTheme);
+    }
+  }, []);
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+    localStorage.setItem("theme", !darkMode);
+  };
   return (
     <DataContext.Provider
       value={{
@@ -27,6 +39,8 @@ const DataProvider = ({ children }) => {
         setDarkMode,
         datosFiltrados,
         setDatosFiltrados,
+        darkMode,
+        toggleTheme,
       }}>
       {children}
     </DataContext.Provider>

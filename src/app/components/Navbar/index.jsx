@@ -6,7 +6,8 @@ import Image from "next/image";
 import { DataContext } from "@/app/context";
 import { useContext } from "react";
 export default function Navbar() {
-  const { darkMode, setDarkMode } = useContext(DataContext);
+  const { darkMode, setDarkMode, toggleTheme } =
+    useContext(DataContext);
   function toggleDarkMode(params) {
     setDarkMode(() => !darkMode);
   }
@@ -29,7 +30,7 @@ export default function Navbar() {
           </div>
           <button
             className="flex gap-2 items-center"
-            onClick={toggleDarkMode}>
+            onClick={toggleTheme}>
             <Image
               src={darkMode ? iconLuna : iconLunaDark}
               alt="Icono"
