@@ -4,6 +4,7 @@
 import { useContext } from "react";
 import { DataContext } from "@/app/context";
 import Image from "next/image";
+import Link from "next/link";
 export default function Cards() {
   const { datosFiltrados, darkMode } =
     useContext(DataContext);
@@ -12,8 +13,9 @@ export default function Cards() {
       <section className="mt-12 ">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-5 px-5 xl:w-[90%] xl:p-0 ">
           {datosFiltrados.map((datos, index) => (
-            <div
+            <Link
               key={index}
+              href={"/detalles"}
               className={`max-w-[250px] w-2/3 xl:w-full mx-auto rounded-lg overflow-hidden xl:m-0 ${
                 darkMode
                   ? "bg-Dark-Blue text-white"
@@ -53,7 +55,7 @@ export default function Cards() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
