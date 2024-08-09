@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <main
         className={`min-h-screen ${
-          darkMode
+          darkMode === "light"
             ? "bg-Very-Dark-Blue-bg"
             : "bg-Very-Light-Gray"
         }`}>

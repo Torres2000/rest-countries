@@ -31,7 +31,9 @@ export default function Buscar() {
         <div className="max-w-7xl w-[90%] mx-auto md:flex justify-between">
           <div
             className={`flex py-3 rounded-lg md:w-2/4 md:p-1 ${
-              darkMode ? "bg-Dark-Blue" : "bg-white"
+              darkMode === "light"
+                ? "bg-Dark-Blue"
+                : "bg-white"
             }`}>
             <Image
               src={iconLupa}
@@ -46,7 +48,7 @@ export default function Buscar() {
               type="text"
               placeholder="Search for a country..."
               className={` w-full focus-visible:outline-none ${
-                darkMode
+                darkMode === "light"
                   ? "bg-Dark-Blue text-white"
                   : "bg-white"
               }`}

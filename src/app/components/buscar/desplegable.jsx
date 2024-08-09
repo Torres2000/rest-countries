@@ -66,7 +66,7 @@ export default function Desplegable() {
         <MenuButton
           className={`inline-flex w-full justify-center gap-x-1.5 rounded-md  px-3 py-4 text-sm font-semibold text-gray-900 shadow-sm 
             ${
-              darkMode
+              darkMode === "light"
                 ? "bg-Dark-Blue text-white"
                 : "bg-white"
             }`}>
@@ -80,7 +80,7 @@ export default function Desplegable() {
         <MenuItems
           transition
           className={`absolute  z-10 mt-2 py-3 w-full origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in ${
-            darkMode
+            darkMode === "light"
               ? "bg-Dark-Blue text-white"
               : "bg-white"
           }`}>

@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
   const [datosFiltrados, setDatosFiltrados] =
     useState(data);
 
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState("light");
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -25,8 +25,11 @@ const DataProvider = ({ children }) => {
     }
   }, []);
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem("theme", !darkMode);
+    const newTheme =
+      darkMode === "light" ? "dark" : "light";
+
+    setDarkMode(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
   return (
     <DataContext.Provider

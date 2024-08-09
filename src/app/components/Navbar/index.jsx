@@ -15,13 +15,15 @@ export default function Navbar() {
     <>
       <section
         className={`${
-          darkMode ? "  bg-Dark-Blue" : " bg-white"
+          darkMode === "light"
+            ? "  bg-Dark-Blue"
+            : " bg-white"
         }`}>
         <nav className="max-w-7xl w-[90%] flex justify-between items-center mx-auto py-6  xl:mx-auto 2xl:px-0 xl:py-8">
           <div>
             <h3
               className={` font-bold text-sm sm:text-base md:text-2xl ${
-                darkMode
+                darkMode === "light"
                   ? "text-white"
                   : "text-Very-Dark-Blue-text"
               }`}>
@@ -32,18 +34,24 @@ export default function Navbar() {
             className="flex gap-2 items-center"
             onClick={toggleTheme}>
             <Image
-              src={darkMode ? iconLuna : iconLunaDark}
+              src={
+                darkMode === "light"
+                  ? iconLuna
+                  : iconLunaDark
+              }
               alt="Icono"
               width={16}
               height={16}
             />
             <span
               className={` text-sm  md:text-base ${
-                darkMode
+                darkMode === "light"
                   ? "text-white"
                   : "text-Very-Dark-Blue-text"
               }`}>
-              {darkMode ? "Light Mode" : "Dark Mode"}
+              {darkMode === "light"
+                ? "Light Mode"
+                : "Dark Mode"}
             </span>
           </button>
         </nav>

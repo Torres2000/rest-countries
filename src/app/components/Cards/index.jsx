@@ -17,7 +17,7 @@ export default function Cards() {
               key={index}
               href={"/detalles"}
               className={`max-w-[250px] w-2/3 xl:w-full mx-auto rounded-lg overflow-hidden xl:m-0 ${
-                darkMode
+                darkMode === "light"
                   ? "bg-Dark-Blue text-white"
                   : "bg-white"
               }`}>
