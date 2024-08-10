@@ -18,6 +18,7 @@ export default function Datos() {
       setSelectedCountry(JSON.parse(savedCountry));
     }
   }, []);
+  console.log(selectedCountry);
 
   function selecLenguaje(pais) {
     return Object.entries(selectedCountry.languages)
@@ -78,7 +79,10 @@ export default function Datos() {
                   <li className="text-sm font-medium md:text-lg">
                     Sub Region:{" "}
                     <span className="font-light ">
-                      {selectedCountry.subRegion}
+                      {selectedCountry.subregion}
+                      {console.log(
+                        selectedCountry.subregion
+                      )}
                     </span>
                   </li>
                   <li className="text-sm font-medium md:text-lg">
