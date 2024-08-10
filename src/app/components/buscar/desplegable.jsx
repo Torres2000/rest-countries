@@ -25,38 +25,6 @@ export default function Desplegable() {
       data.filter((country) => country.region === region)
     );
   };
-  const navigation = [
-    {
-      name: "Africa",
-      href: "#inicio",
-      current: true,
-      region: "region/africa",
-    },
-    {
-      name: "America",
-      href: "#sobreMi",
-      current: false,
-      region: "region/america",
-    },
-    {
-      name: "Asia",
-      href: "#habilidades",
-      current: false,
-      region: "region/asia",
-    },
-    {
-      name: "Europe",
-      href: "#curriculum",
-      current: false,
-      region: "region/europe",
-    },
-    {
-      name: "Oceania",
-      href: "#portfolio",
-      current: false,
-      region: "region/oceania",
-    },
-  ];
 
   return (
     <>
@@ -64,7 +32,7 @@ export default function Desplegable() {
         as="div"
         className="relative inline-block text-left mt-8 md:m-0">
         <MenuButton
-          className={`inline-flex w-full justify-center gap-x-1.5 rounded-md  px-3 py-4 text-sm font-semibold text-gray-900 shadow-sm 
+          className={`inline-flex w-full  justify-center gap-x-1.5 rounded-md  px-3 py-4 text-sm  text-gray-900 shadow-sm  xl:w-[200px] xl:justify-between xl:px-5
             ${
               darkMode === "light"
                 ? "bg-Dark-Blue text-white"
@@ -89,7 +57,7 @@ export default function Desplegable() {
               <MenuItem>
                 <span
                   onClick={() => handleRegionChange(dato)}
-                  className="block px-2 py-2 text-sm  data-[focus]:bg-gray-100 data-[focus]:text-gray-900 hover:bg-Dark-Gray cursor-pointer rounded-md">
+                  className="block px-3 py-2 text-sm  data-[focus]:bg-Dark-Gray data-[focus]:text-gray-900  cursor-pointer rounded-md">
                   {dato}
                 </span>
               </MenuItem>

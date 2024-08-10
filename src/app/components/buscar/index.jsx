@@ -27,10 +27,10 @@ export default function Buscar() {
 
   return (
     <>
-      <section className="mt-6">
+      <section className="mt-12">
         <div className="max-w-7xl w-[90%] mx-auto md:flex justify-between">
           <div
-            className={`flex py-3 rounded-lg md:w-2/4 md:p-1 ${
+            className={`flex py-3 rounded-lg md:w-[480px] md:p-1 ${
               darkMode === "light"
                 ? "bg-Dark-Blue"
                 : "bg-white"
@@ -38,8 +38,8 @@ export default function Buscar() {
             <Image
               src={iconLupa}
               alt="Icon Lupa"
-              width={16}
-              height={16}
+              width={20}
+              height={20}
               className="mx-6 cursor-pointer "
             />
             <input
@@ -47,7 +47,7 @@ export default function Buscar() {
               onChange={handleSearchChange}
               type="text"
               placeholder="Search for a country..."
-              className={` w-full focus-visible:outline-none ${
+              className={` w-full focus-visible:outline-none text-sm ${
                 darkMode === "light"
                   ? "bg-Dark-Blue text-white"
                   : "bg-white"

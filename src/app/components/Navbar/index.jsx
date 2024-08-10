@@ -19,7 +19,7 @@ export default function Navbar() {
             ? "  bg-Dark-Blue"
             : " bg-white"
         }`}>
-        <nav className="max-w-7xl w-[90%] flex justify-between items-center mx-auto py-6  xl:mx-auto 2xl:px-0 xl:py-8">
+        <nav className="max-w-7xl w-[90%] flex justify-between items-center mx-auto py-6  xl:mx-auto 2xl:px-0 xl:py-6">
           <div>
             <h3
               className={` font-bold text-sm sm:text-base md:text-2xl ${
@@ -44,7 +44,7 @@ export default function Navbar() {
               height={16}
             />
             <span
-              className={` text-sm  md:text-base ${
+              className={`font-medium text-sm  md:text-base ${
                 darkMode === "light"
                   ? "text-white"
                   : "text-Very-Dark-Blue-text"
