@@ -20,18 +20,18 @@ export default function Cards() {
   return (
     <>
       <section className="mt-12 ">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-5 px-5 xl:w-[90%] xl:p-0 ">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-between gap-5 w-[90%] xl:p-0 md:gap-y-20 ">
           {datosFiltrados.map((datos, index) => (
             <Link
               key={index}
               href={"/detalles"}
               onClick={() => handleCardClick(datos)}
-              className={`max-w-[250px] w-2/3 xl:w-full mx-auto rounded-lg overflow-hidden xl:m-0 ${
+              className={`max-w-[264px] w-2/3 xl:w-full  rounded-lg overflow-hidden xl:m-0 ${
                 darkMode === "light"
                   ? "bg-Dark-Blue text-white"
                   : "bg-white"
               }`}>
-              <div className="h-[150px]">
+              <div className="h-[164px]">
                 <Image
                   src={datos.flag}
                   width={1000}
@@ -40,7 +40,7 @@ export default function Cards() {
                   className="w-full h-full"
                 />
               </div>
-              <div className="my-5 ml-5 ">
+              <div className="mt-5 mb-10 ml-6 ">
                 <h3 className="font-bold text-lg mb-4">
                   {datos.name}
                 </h3>
