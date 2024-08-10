@@ -9,7 +9,7 @@ export default function Datos() {
   return (
     <>
       <section
-        className={`w-[90%] mx-auto mt-16 pb-6 flex flex-col gap-10 2xl:w-auto lg:flex-row lg:items-center`}>
+        className={` mx-auto mt-16 pb-6 flex flex-col gap-10 2xl:w-auto lg:flex-row lg:items-center xl:gap-20`}>
         <div>
           <img
             src="https://flagcdn.com/ax.svg"
@@ -18,7 +18,7 @@ export default function Datos() {
           />
         </div>
         <div
-          className={` md:w-[600px] md:mx-auto  ${
+          className={`  md:mx-auto xl:w-auto xl:m-0  ${
             darkMode === "light"
               ? "text-white"
               : "text-Very-Dark-Blue-text"
@@ -27,7 +27,7 @@ export default function Datos() {
             className={`text-2xl font-bold mb-4 md:text-4xl md:mb-8`}>
             Belgium
           </h3>
-          <div className="flex flex-col gap-10 mb-10 md:flex-row">
+          <div className="flex flex-col gap-10 mb-10 md:flex-row xl:justify-between">
             <ul
               className={`flex flex-col gap-2 ${
                 darkMode === "light"
@@ -77,9 +77,9 @@ export default function Datos() {
             </ul>
           </div>
 
-          <div className="md:flex gap-4 items-center">
+          <div className="md:flex gap-4 items-center 2xl:items-start">
             <p>Border Countries: </p>
-            <div className="flex flex-wrap gap-2 mt-4">
+            <div className="flex flex-wrap gap-2 mt-4 xl:m-0">
               <a
                 href=""
                 className="border rounded px-2 py-1">

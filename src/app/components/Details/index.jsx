@@ -18,7 +18,7 @@ export default function Details() {
             : "bg-Very-Light-Gray"
         }`}>
         <Navbar />
-        <section className="max-w-7xl xl:mx-auto">
+        <section className="max-w-7xl w-[90%] mx-auto xl:mx-auto">
           <Atras />
           <DatosDetalles />
         </section>
