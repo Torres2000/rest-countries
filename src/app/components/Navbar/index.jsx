@@ -36,8 +36,8 @@ export default function Navbar() {
             <Image
               src={
                 darkMode === "light"
-                  ? iconLuna
-                  : iconLunaDark
+                  ? iconLunaDark
+                  : iconLuna
               }
               alt="Icono"
               width={16}

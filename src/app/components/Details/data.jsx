@@ -133,7 +133,11 @@ export default function Datos() {
                     selectedCountry.borders.map(
                       (border, index) => (
                         <span
-                          className="border rounded px-2 py-1 cursor-pointer"
+                          className={` rounded px-2 py-1 cursor-pointer shadow-sm shadow-black ${
+                            darkMode === "light"
+                              ? "bg-Dark-Blue"
+                              : "bg-white"
+                          }`}
                           key={index}>
                           <BuscarPaisCodigo code={border} />
                         </span>
