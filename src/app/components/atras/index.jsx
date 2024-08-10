@@ -13,7 +13,7 @@ export default function Atras() {
     <>
       <Link
         href={"/"}
-        className={`ml-[5%] mt-6 xl:mt-20 flex items-center w-32 justify-center gap-2 rounded py-1 shadow-sm shadow-black xl:py-3 font-light cursor-pointer ${
+        className={`ml-[5%] mt-6 xl:mt-20 flex items-center w-32 justify-center gap-2 rounded py-1 shadow-sm shadow-black xl:py-3 font-light cursor-pointer xl:ml-0 ${
           darkMode === "light"
             ? "text-white bg-Dark-Blue"
             : "text-black"
