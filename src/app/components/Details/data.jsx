@@ -9,7 +9,6 @@ import BuscarPaisCodigo from "../funciones/BuscarPaisCodigo";
 export default function Datos() {
   const { darkMode, selectedCountry, setSelectedCountry } =
     useContext(DataContext);
-  console.log(selectedCountry);
 
   useEffect(() => {
     const savedCountry = localStorage.getItem(
@@ -29,7 +28,7 @@ export default function Datos() {
   return (
     <>
       <section
-        className={` mx-auto mt-16 pb-6 flex flex-col gap-10 2xl:w-auto lg:flex-row lg:items-center xl:gap-20`}>
+        className={` mx-auto mt-16 pb-6 grid gap-10 md:w-3/4 lg:grid-cols-2 lg:w-auto 2xl:w-auto lg:flex-row lg:items-center xl:gap-20`}>
         {selectedCountry && (
           <>
             <div>
@@ -125,18 +124,20 @@ export default function Datos() {
                 </ul>
               </div>
 
-              <div className="md:flex gap-4 items-center 2xl:items-start">
+              <div className="md:flex gap-4 items-center lg:items-start">
                 <p>Border Countries: </p>
 
-                <div className="flex flex-wrap gap-2 mt-4 xl:m-0">
+                <div className="flex flex-wrap gap-2 mt-4 lg:m-0">
                   {selectedCountry.borders &&
-                  selectedCountry.borders.map ? (
-                    (border, index) => (
-                      <span
-                        className="border rounded px-2 py-1 cursor-pointer "
-                        key={index}>
-                        <BuscarPaisCodigo code={border} />
-                      </span>
+                  selectedCountry.borders.length > 0 ? (
+                    selectedCountry.borders.map(
+                      (border, index) => (
+                        <span
+                          className="border rounded px-2 py-1 cursor-pointer"
+                          key={index}>
+                          <BuscarPaisCodigo code={border} />
+                        </span>
+                      )
                     )
                   ) : (
                     <span>No Posee Borders</span>
