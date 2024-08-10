@@ -5,9 +5,18 @@ import { useContext } from "react";
 import { DataContext } from "@/app/context";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 export default function Cards() {
-  const { datosFiltrados, darkMode } =
+  const { datosFiltrados, darkMode, setSelectedCountry } =
     useContext(DataContext);
+
+  const handleCardClick = (country) => {
+    setSelectedCountry(country);
+    localStorage.setItem(
+      "selectedCountry",
+      JSON.stringify(country)
+    );
+  };
   return (
     <>
       <section className="mt-12 ">
@@ -16,6 +25,7 @@ export default function Cards() {
             <Link
               key={index}
               href={"/detalles"}
+              onClick={() => handleCardClick(datos)}
               className={`max-w-[250px] w-2/3 xl:w-full mx-auto rounded-lg overflow-hidden xl:m-0 ${
                 darkMode === "light"
                   ? "bg-Dark-Blue text-white"

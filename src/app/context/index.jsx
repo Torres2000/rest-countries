@@ -17,6 +17,8 @@ const DataProvider = ({ children }) => {
     useState(data);
 
   const [darkMode, setDarkMode] = useState("light");
+  const [selectedCountry, setSelectedCountry] =
+    useState(null);
 
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
@@ -44,6 +46,8 @@ const DataProvider = ({ children }) => {
         setDatosFiltrados,
         darkMode,
         toggleTheme,
+        selectedCountry,
+        setSelectedCountry,
       }}>
       {children}
     </DataContext.Provider>
