@@ -7,8 +7,13 @@ import { useEffect } from "react";
 import Image from "next/image";
 import BuscarPaisCodigo from "../funciones/BuscarPaisCodigo";
 export default function Datos() {
-  const { darkMode, selectedCountry, setSelectedCountry } =
-    useContext(DataContext);
+  const {
+    data,
+    darkMode,
+    selectedCountry,
+    setSelectedCountry,
+  } = useContext(DataContext);
+  console.log(selectedCountry);
 
   useEffect(() => {
     const savedCountry = localStorage.getItem(
@@ -25,7 +30,21 @@ export default function Datos() {
       .map(([key, value]) => `${value.name}`)
       .join(", ");
   }
+  function BuscarPais(code) {
+    console.log(code);
 
+    const country = data.find(
+      (country) =>
+        country.alpha2Code === code ||
+        country.alpha3Code === code
+    );
+    setSelectedCountry(country);
+
+    localStorage.setItem(
+      "selectedCountry",
+      JSON.stringify(country)
+    );
+  }
   return (
     <>
       <section
@@ -80,9 +99,6 @@ export default function Datos() {
                     Sub Region:{" "}
                     <span className="font-light ">
                       {selectedCountry.subregion}
-                      {console.log(
-                        selectedCountry.subregion
-                      )}
                     </span>
                   </li>
                   <li className="text-sm font-medium md:text-lg">
@@ -136,19 +152,20 @@ export default function Datos() {
                   selectedCountry.borders.length > 0 ? (
                     selectedCountry.borders.map(
                       (border, index) => (
-                        <span
-                          className={` rounded px-2 py-1 cursor-pointer shadow-sm shadow-black ${
+                        <button
+                          onClick={() => BuscarPais(border)}
+                          className={`rounded px-2 py-1 cursor-pointer shadow-sm shadow-black ${
                             darkMode === "light"
                               ? "bg-Dark-Blue"
                               : "bg-white"
                           }`}
                           key={index}>
                           <BuscarPaisCodigo code={border} />
-                        </span>
+                        </button>
                       )
                     )
                   ) : (
-                    <span>No Posee Borders</span>
+                    <span>No Posee Bordes</span>
                   )}
                 </div>
               </div>
