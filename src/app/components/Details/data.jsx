@@ -129,7 +129,8 @@ export default function Datos() {
                 <p>Border Countries: </p>
 
                 <div className="flex flex-wrap gap-2 mt-4 xl:m-0">
-                  {selectedCountry.borders.map(
+                  {selectedCountry.borders &&
+                  selectedCountry.borders.map ? (
                     (border, index) => (
                       <span
                         className="border rounded px-2 py-1 cursor-pointer "
@@ -137,6 +138,8 @@ export default function Datos() {
                         <BuscarPaisCodigo code={border} />
                       </span>
                     )
+                  ) : (
+                    <span>No Posee Borders</span>
                   )}
                 </div>
               </div>
