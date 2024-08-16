@@ -8,9 +8,6 @@ import { useContext } from "react";
 export default function Navbar() {
   const { darkMode, setDarkMode, toggleTheme } =
     useContext(DataContext);
-  function toggleDarkMode(params) {
-    setDarkMode(() => !darkMode);
-  }
   return (
     <>
       <section

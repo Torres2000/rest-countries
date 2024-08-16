@@ -3,7 +3,7 @@
 import { DataContext } from "@/app/context";
 import { useContext } from "react";
 import Navbar from "@/app/components/Navbar";
-import Buscar from "@/app/components/Buscar/index";
+import Buscar from "@/app/components/buscar";
 import Cards from "@/app/components/Cards";
 
 export default function Home() {

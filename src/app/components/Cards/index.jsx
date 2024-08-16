@@ -5,7 +5,6 @@ import { useContext } from "react";
 import { DataContext } from "@/app/context";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 export default function Cards() {
   const { datosFiltrados, darkMode, setSelectedCountry } =
     useContext(DataContext);
