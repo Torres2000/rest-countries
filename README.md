@@ -13,7 +13,6 @@ Esta es una solución al [Desafío de API de países REST con selector de tema d
 - [Mi proceso](#mi-proceso)
 - [Creado con](#creada-con)
 - [Lo que aprendí](#lo-que-aprendí)
-- [Desarrollo continuo](#desarrollo-continuo)
 - [Recursos útiles](#recursos-útiles)
 - [Autor](#autor)
 - [Agradecimientos](#agradecimientos)
