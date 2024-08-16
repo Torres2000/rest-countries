@@ -35,13 +35,7 @@ Los usuarios deberían poder:
 
 ### Captura de pantalla
 
-![](@/app/img/capture.png)
-
-Agrega una captura de pantalla de tu solución. La forma más fácil de hacerlo es usar Firefox para ver tu proyecto, hacer clic derecho en la página y seleccionar "Tomar una captura de pantalla". Puedes elegir una captura de pantalla de altura completa o una recortada según la longitud de la página. Si es muy larga, puede ser mejor recortarla.
-
-Alternativamente, puedes usar una herramienta como [FireShot](https://getfireshot.com/) para tomar la captura de pantalla. FireShot tiene una opción gratuita, por lo que no necesitas comprarla.
-
-Luego recorta/optimiza/edita tu imagen como quieras, agrégala a tu proyecto y actualiza la ruta del archivo en la imagen de arriba.
+![](./src/app/img/capture.png)
 
 ### Enlaces
 
