@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- @format -->
 
-## Getting Started
+# Frontend Mentor - Solución de API de países REST con selector de tema de color
 
-First, run the development server:
+Esta es una solución al [Desafío de API de países REST con selector de tema de color en Frontend Mentor](https://www.frontendmentor.io/challenges/rest-countries-api-with-color-theme-switcher-5cacc469fec04111f7b848ca). Los desafíos de Frontend Mentor te ayudan a mejorar tus habilidades de codificación mediante la creación de proyectos realistas.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Índice
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Descripción general](#descripción-general)
+- [El desafío](#el-desafío)
+- [Captura de pantalla](#captura-de-pantalla)
+- [Enlaces](#enlaces)
+- [Mi proceso](#mi-proceso)
+- [Creado con](#creada-con)
+- [Lo que aprendí](#lo-que-aprendí)
+- [Desarrollo continuo](#desarrollo-continuo)
+- [Recursos útiles](#recursos-útiles)
+- [Autor](#autor)
+- [Agradecimientos](#agradecimientos)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Nota: elimine esta nota y actualice el índice en función de las secciones que conserve.**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Descripción general
 
-## Learn More
+### El desafío
 
-To learn more about Next.js, take a look at the following resources:
+Los usuarios deberían poder:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Ver todos los países desde la API en la página de inicio
+- Buscar un país usando un campo de `entrada`
+- Filtrar países por región
+- Hacer clic en un país para ver información más detallada en una página aparte
+- Haz clic en los países limítrofes en la página de detalles
+- Alterna el esquema de colores entre el modo claro y oscuro _(opcional)_
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Captura de pantalla
 
-## Deploy on Vercel
+![](@/app/img/capture.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Agrega una captura de pantalla de tu solución. La forma más fácil de hacerlo es usar Firefox para ver tu proyecto, hacer clic derecho en la página y seleccionar "Tomar una captura de pantalla". Puedes elegir una captura de pantalla de altura completa o una recortada según la longitud de la página. Si es muy larga, puede ser mejor recortarla.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Alternativamente, puedes usar una herramienta como [FireShot](https://getfireshot.com/) para tomar la captura de pantalla. FireShot tiene una opción gratuita, por lo que no necesitas comprarla.
+
+Luego recorta/optimiza/edita tu imagen como quieras, agrégala a tu proyecto y actualiza la ruta del archivo en la imagen de arriba.
+
+### Enlaces
+
+- URL de la solución: [Agregar la URL de la solución aquí](https://your-solution-url.com)
+- URL del sitio en vivo: [Agregar la URL del sitio en vivo aquí](https://your-live-site-url.com)
+
+## Mi proceso
+
+### Creado con
+
+- Marcado HTML5 semántico
+- Propiedades personalizadas de CSS
+- Flexbox
+- Cuadrícula CSS
+- Flujo de trabajo para dispositivos móviles
+- [React](https://reactjs.org/) - Biblioteca JS
+- [Next.js](https://nextjs.org/) - Marco de trabajo de React
+- [Componentes con estilo](https://styled-components.com/) - Para estilos
+
+### Lo que aprendí
+
+Aprendi a ubicar los detalles de los paices fronterisos al hacer clic en uno de ellos y asi sucesivamente
+
+### Recursos útiles
+
+- [Tailwind CSS](https://tailwindcss.com/): esto me ayudó a estilizar todo mi contenido
+
+## Autor
+
+- Sitio web - [Pedro Torres](https://pedro-j-torres.vercel.app/)
+- Mentor de frontend - [@Torres2000](https://www.frontendmentor.io/profile/Torres2000)
+
+## Agradecimientos
+
+Solo un saludo a todos los demás creadores de Frontend Mentor. Es una experiencia de aprendizaje maravillosa ver otras soluciones y ver cómo otros codificadores crean lo mismo.
