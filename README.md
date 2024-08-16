@@ -36,8 +36,8 @@ Los usuarios deberían poder:
 
 ### Enlaces
 
-- URL de la solución: [Agregar la URL de la solución aquí](https://your-solution-url.com)
-- URL del sitio en vivo: [Agregar la URL del sitio en vivo aquí](https://your-live-site-url.com)
+- URL de la solución: [https://github.com/Torres2000/rest-countries](https://github.com/Torres2000/rest-countries)
+- URL del sitio en vivo: [https://rest-countries-api-wine-pi.vercel.app/](https://rest-countries-api-wine-pi.vercel.app/)
 
 ## Mi proceso
 
