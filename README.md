@@ -18,8 +18,6 @@ Esta es una solución al [Desafío de API de países REST con selector de tema d
 - [Autor](#autor)
 - [Agradecimientos](#agradecimientos)
 
-**Nota: elimine esta nota y actualice el índice en función de las secciones que conserve.**
-
 ## Descripción general
 
 ### El desafío
@@ -35,7 +33,7 @@ Los usuarios deberían poder:
 
 ### Captura de pantalla
 
-![](./src/app/img/capture.png)
+![](./public/capture.png)
 
 ### Enlaces
 
